@@ -80,3 +80,8 @@ https://github.com/angular/angular-seed
 9. ng-animate
 	* Animations based on CSS3 transitions (or jQuery)
 	* Trigger animations through HTML attributes
+
+## Try it out
+
+Clone the repository and use any webserver (e.g. apache, nginx) and mount the app at `/app` and make sure the server serves `app/index.html` through HTTP
+
