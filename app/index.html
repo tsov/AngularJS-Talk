@@ -1,24 +1,32 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="angular">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
-  <link rel="stylesheet" href="css/app.css"/>
+  <title>AngularJS Google Talk</title>
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+  <link href="css/application.css" rel="stylesheet">
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand">AngularJS</a>
+          <ul class="nav">
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/ng-animate">ng-animate</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div ng-view ng-animate="'animate'"></div>
+    </div>
+  </div>
 
-  <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
-
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-  -->
-  <script src="lib/angular/angular.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>
