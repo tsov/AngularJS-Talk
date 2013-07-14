@@ -1,0 +1,31 @@
+Will Brennan
+Web developer at Publicis D Healthcare
+
+Title of Talk 1
+Basics of AngularJS
+
+
+Binding
+-AngularJS extends HTML
+-Dynamic Views without handling DOM elements
+-Code reduction
+
+Directives (Built-In)
+-Change behavior of existing or new elements
+-Element functionality
+-customise HTML elements
+-Build in directives
+
+Controllers and Scope
+-Controller directs data to the model
+-Boundaries of scope
+-defining scope variable
+
+MVC
+-Front End MVC
+-Dynamic loading
+-only load what's nessecary
+-grouping functionality by controller
+
+
+

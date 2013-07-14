@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+		<title>AngularJS 1.1 - Binding</title>
+		<link rel='stylesheet' type='text/css' media='all' href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css"/>
+		<style>
+			/*.one {
+				color:blue;
+			}
+			.two {
+				color:red;
+			}*/
+		</style>
+	</head>
+  <body>
+
+
+		<input type="text" ng-model="data.message">
+		<h1>{{data.message}}</h1>
+		<!-- <h1 class="{{data.message}}">{{data.message}}</h1> -->
+
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  </body>
+</html>
