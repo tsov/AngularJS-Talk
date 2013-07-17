@@ -1,7 +1,10 @@
 'use strict';
 
-angular.module('angular.controllers', []).
-  controller('ngAnimateCtrl', ['$scope', function($scope) {
+angular.module('angular.controllers', [])
+  .controller('myController', ['$scope', function($scope) {
+    // $scope.data = {message: "Whoop Whoop!"};
+  }])
+  .controller('ngAnimateCtrl', ['$scope', function($scope) {
 
     $scope.messages = [
       {

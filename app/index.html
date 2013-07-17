@@ -2,20 +2,49 @@
 <html lang="en" ng-app="angular">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>AngularJS Google Talk</title>
   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100normal,100italic,300normal,300italic,400normal,400italic,500normal,500italic,700normal,700italic,900normal,900italic|Open+Sans:400normal|Gloria+Hallelujah:400normal|Roboto+Condensed:400normal|Droid+Sans:400normal|Oswald:400normal|Lato:400normal|Droid+Serif:400normal|Raleway:400normal|Ubuntu:400normal|Source+Sans+Pro:400normal&subset=all" rel="stylesheet">
   <link href="css/application.css" rel="stylesheet">
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".nav-stacked li a").click(function() {
+        $('#menu').slideToggle()
+      });
+    });
+  </script>
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="hidden-desktop">
+    <div id="menu" class="container-fluid spacing" style="display: none;">
+      <div class="row-fluid">
+        <ul class="nav nav-tabs nav-stacked">
+          <li><a href="#/home">Home</a></li>
+          <li><a href="#/bindings">Bindings</a></li>
+          <li><a href="#/directives">Directives</a></li>
+          <li><a href="#/controllers-scope">Controllers & Scope</a></li>
+          <li><a href="#/ng-animate">Ng-Animate</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid spacing">
     <div class="row-fluid">
-      <div class="navbar">
+      <div class="navbar" ng-animate="'navbar-animation'">
         <div class="navbar-inner">
           <a class="brand">AngularJS</a>
-          <ul class="nav">
+          <ul class="nav hidden-phone hidden-tablet">
             <li><a href="#/home">Home</a></li>
-            <li><a href="#/ng-animate">ng-animate</a></li>
+            <li><a href="#/bindings">Bindings</a></li>
+            <li><a href="#/directives">Directives</a></li>
+            <li><a href="#/controllers-scope">Controllers & Scope</a></li>
+            <li><a href="#/ng-animate">Ng-Animate</a></li>
+          </ul>
+          <ul class="nav pull-right hidden-desktop">
+            <li><button class="btn" onclick="$('#menu').slideToggle()"><i class="icon-list"></i></button></li>
           </ul>
         </div>
       </div>
