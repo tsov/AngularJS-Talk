@@ -1,3 +1,17 @@
+body {
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
+.spacing {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.well {
+  height: 60px;
+}
+
 ul.ng-animate {
   width: inherit;
   list-style: none;
@@ -15,12 +29,46 @@ ul.ng-animate li blockquote {
 }
 
 ul.ng-animate li:first-child blockquote {
-  margin: 0px 0 20px;
+  margin: 0 0 20px;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .page-header h1 {
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
 }
 
 /*
 NG-ANIMATE
 */
+
+.navbar-animation-show {
+  -webkit-animation: enter 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  animation: enter 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
+
+}
+
+
 
 .animate-enter {
   -webkit-animation: enter 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
@@ -62,7 +110,7 @@ NG-ANIMATE
 .animate-leave {
   -webkit-animation: leave 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
   animation: leave 600ms cubic-bezier(0.445, 0.050, 0.550, 0.950);
-  display: block;
+  display: none;
   position: relative;
 }
 @-webkit-keyframes leave {
@@ -75,6 +123,7 @@ NG-ANIMATE
     left: 15px;
   }
   from {
+    display: none;
     opacity: 1;
     height: 30px;
     left: 0px;
