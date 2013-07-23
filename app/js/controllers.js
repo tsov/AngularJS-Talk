@@ -1,6 +1,28 @@
 'use strict';
 
-angular.module('angular.controllers', [])
+angular.module('angular.controllers', []).
+  controller('PresentationController', ['$scope', '$routeParams', '$location', 'outline', function($scope, $routeParams, $location, outline) {
+    $scope.$on('$routeChangeSuccess', function(event, current) {
+      $scope.slide = current.params.slide;
+    });
+    $scope.outline = outline;
+    $scope.navigate = function(e) {
+      var newSlide;
+      if (e.keyCode == 37) {
+        // left
+        if ($routeParams.slide > 0) {
+          newSlide = parseInt($routeParams.slide) - 1;
+          $location.path('/' + newSlide);
+          $scope.slide = newSlide;
+        }
+      } else if (e.keyCode == 39) {
+        // right
+        newSlide = parseInt($routeParams.slide) + 1;
+        $location.path('/' + newSlide);
+        $scope.slide = newSlide;
+      }
+    };
+  }])
 
   .controller('myController', ['$scope', function($scope) {
     // $scope.data = {message: "Whoop Whoop!"};

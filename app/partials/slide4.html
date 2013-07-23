@@ -1,27 +1,5 @@
-<div ng-controller="ngAnimateCtrl">
-
-  <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="span12">
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="navbar-form" style="text-align: center;">
-              <input type="text" placeholder="Search..." ng-model="query" style="width: 90%;">
-            </div>
-          </div>
-        </div>
-        <div class="container-fluid">
-          <ul class="ng-animate">
-            <li ng-repeat="message in messages | filter:query" ng-animate="{ enter: 'animate-enter', leave: 'animate-leave'}">
-              <blockquote>
-                <p>{{message.content}}</p>
-                <small>{{message.author}}</small>
-              </blockquote>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
+<div class="slide">
+	<div class="slide-content">
+    Structure, Extend HTML, Testability
+	</div>
 </div>
