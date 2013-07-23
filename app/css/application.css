@@ -1,6 +1,21 @@
 body {
-  font-family: 'Roboto';
+  font-family: 'Consolas';
   font-weight: 300;
+  position: relative;
+}
+
+.slide {
+  height: 800px;
+  font-size: 70px;
+  position: relative;
+  text-align: center;
+}
+
+.slide-content {
+  left: 0;
+  position: absolute;
+  top: 400px;
+  width: 100%;
 }
 
 .spacing {
@@ -79,7 +94,6 @@ NG-ANIMATE
 @-webkit-keyframes enter {
   from {
     opacity: 0;
-    height: 0px;
     left: -70px;
   }
   75% {
@@ -87,14 +101,12 @@ NG-ANIMATE
   }
   to {
     opacity: 1;
-    height: 30px;
-    left: 0px;
+    left: 0;
   }
 }
 @keyframes enter {
   from {
     opacity: 0;
-    height: 0px;
     left: -70px;
   }
   75% {
@@ -102,8 +114,7 @@ NG-ANIMATE
   }
   to {
     opacity: 1;
-    height: 30px;
-    left: 0px;
+    left: 0;
   }
 }
 
@@ -144,3 +155,4 @@ NG-ANIMATE
     left: 0px;
   }
 }
+
