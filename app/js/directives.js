@@ -22,8 +22,8 @@ angular.module('angular.directives', []).
       template:
         '<h1>' + 
           '<span ng-repeat="item in subset">' +
-            '<small ng-show="(slide != 0 && $index != 1) || (slide == 0 && $index != 0)">{{item}}</small> ' +
-            '<span ng-show="(slide != 0 && $index == 1) || (slide == 0 && $index == 0)">{{item}}</span> ' +
+            '<small ng-show="(slide != 0 && $index != 1) || (slide == 0 && $index != 0)">{{item.title}}</small> ' +
+            '<span ng-show="(slide != 0 && $index == 1) || (slide == 0 && $index == 0)">{{item.title}}</span> ' +
           '</span>' +
         '</h1>'
     };
