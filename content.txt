@@ -77,6 +77,53 @@ What's ng-model? it's a directive
 
 13
 
+Let's talk about directives
+
+Directives are a way to teach HTML new tricks - it's a way to extend the HTML vocabularly by introducing new elements, or attributes
+
+We'll talk aout how to add your own directives later but for now, we'll show you a few built-in directives that angular provides
+
+ng-model binds the value of an input field - such as a text field - to the 
+
+ng-show shows or hides the element based on the value that the expression specified inside the ng-show attribute evaluates to
+
+ng-repeat treats the element on which it is declared on as a template, and clones that element once per each item in the list which you are repeating on
+
+14
+
+Let's take a look at those directives working live
+
+15
+
+Hopefully with bindings and directives, you've started to see one of the philosophical beliefs in angular: Declarative is better than imperative for constructing UIs
+
+If you start with the belief that HTML is a great declartive language for static documents, Angular adds enough so that HTML becomes a great declarative language for dynamic web applications
+
+
+16
+
+So imagine being able to do something lik this:
+
+
+You declare a grid, and it creates all the DOM necessary for showing a grid. It sets up all the necessary glue so that the data model specified here is bound to the grid that is visualized
+
+You can re-use this grid anywhere you need a grid
+
+It's more readable, easier to understand and more elegant
+
+With angular, these are directives
+
+But we just wanted to mention that this isn't just about angular - this approach to create re-usable dynaimc web components using HTML's declarative style is probably going to be the future
+
+At least if you are to believe a few at Google who are working on the next generation of web frameworks
+
+
+Polymer
+
+
+
+
+
 
 
 
