@@ -1,22 +1,15 @@
 <div class="container-fluid">
-  <div class="row-fluid">
+  <div class="row-fluid" ng-controller="DirectivesDemoController">
     <div class="page-header">
       <h1>Directives</h1>
     </div>
 
-    Checkbox: <input type="checkbox" ng-model="checkbox1"><br>
-    <h3 ng-show="checkbox1">Clicked!</h3>
-    <h3 ng-hide="checkbox1">Unclicked...</h3>
+    <input type="text" value="0" ng-model="count"><br />
+    <h3>Count: {{count}}</h3>
 
-    <!-- <input type="button" value="Add One" ng-click="count = count + 1" ng-init="count=1"><br>
-    <h3>Count: {{count}}</h3> -->
-
-    <!-- <div ng-init="letters = ['A','B','C']">
-      letters array has {{letters.length}} elements.
-       <h3 ng-repeat="letter in letters">
-         letters[{{$index}}] = {{letter}}
-      </h3>
-    </div>  -->
+    <ul ng-show="count > 0">
+      <li ng-repeat="item in items">Item #{{item.index}}</li>
+    </ul>
     
   </div>
 </div>

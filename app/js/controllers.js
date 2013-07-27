@@ -23,6 +23,15 @@ angular.module('angular.controllers', []).
       }
     };
   }])
+  .controller('DirectivesDemoController', ['$scope', function($scope) {
+    $scope.items = [];
+    $scope.$watch('count', function(newValue, oldValue) {
+      $scope.items = [];
+      for (var i = 0; i < newValue; i++) {
+        $scope.items.push({index: i});
+      }
+    });
+  }])
 
   .controller('myController', ['$scope', function($scope) {
     // $scope.data = {message: "Whoop Whoop!"};
