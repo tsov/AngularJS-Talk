@@ -1,8 +1,11 @@
 Will Brennan
-Web developer at Publicis D Healthcare
+Recently started working as a developer at Publicis D Healthcare after graduating with a first in Computing. Mostly working on web applications in PHP and native iOS apps. Also has a degree in Product Design with a strong skills in Photoshop, AutoCAD and Solidworks.
+
 
 Title of Talk 1
 Basics of AngularJS
+Introduction to AngularJS concepts, explaining some of the benefits of using Angular as well as examples jumping straight into the code.
+
 
 
 Binding
@@ -24,7 +27,7 @@ Controllers and Scope
 MVC
 -Front End MVC
 -Dynamic loading
--only load what's nessecary
+-only load what's necessary
 -grouping functionality by controller
 
 

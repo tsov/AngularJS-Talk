@@ -1,0 +1,86 @@
+1
+
+Welcome to the talk
+
+2
+
+Intros of everyone
+
+3
+
+Here's a list of all the topics we're covering today - obviously we're not going to go into too much depth with all of them . This is more to give you a taste of the angular way of thinking and what angular has to offer
+
+Hopefully some of it sticks, and you'll start to love angular the way we do
+
+4
+
+What is angular? Angular is a Javascript framework for creating great web applications that are really well structured & organized
+
+It has a pretty unique approach for constructing these apps - 
+
+5
+
+Here are some of the ways it's unique - obviously there are a lot of things different about it, these are just a few of the ones that we feel are important
+
+It extends the HTML vocabularly so that you are creating your own HTML elements that have custom functionality
+
+Unlike other Javascript frameworks, angular reduces the amount of DOM manipulation so that you can focus on your business logic
+
+And finally, beause of the way you structure your applications, your code is way more testable - and you're going to find yourself writing plenty of unit tests for your Javascript app
+
+6
+
+So let's start with reducing DOM manipulation .. And to show you how it does, we'll first describe how it's done in other frameworks
+
+You've probably seen MVC - it's a pretty standard approach - you have a model, and you have a view. The glue in between the two is the controller
+
+7
+
+Typically, the controller is the bit that listens on UI events, and responds to them by updating the UI using jQuery, or just directly manipulating the DOM. And for good measure, they also deal with the business logic. It can get pretty messy pretty quickly
+
+8
+
+In angular, the controllers have a more purpose driven life. And it's a pretty simple purpose - they just create and update the view model
+
+What's the view model?
+
+9
+
+
+The view-model is a simpler model that's tailor fit to be visualized by a view. In MVVM then, the contorller's job is to take the model and simplify it into this simpler view model. You can see then in angular, the controller is much smaller
+
+10
+
+So let's look at what the view model looks like:
+
+In angular, the view model is called the Scope, and it's just a simple Javascript object
+
+Here we're adding a couple of bits of data to the scope
+
+This is what an angular controller would do -
+
+And in fact, that's all you would expect to see in an angular controller - no dom manipulation, no event handling, just setting up and managing the scope, aka the view model
+
+11
+
+And now lets see how to bind the view model to the view
+
+12
+
+And let's see it live
+
+Notice there are no event handlers, there's no dom manipulation - it's all done declaratively
+
+There's one part of this that we haven't covered yet and that's the ng-model
+
+What's ng-model? it's a directive
+
+13
+
+
+
+
+
+
+
+
