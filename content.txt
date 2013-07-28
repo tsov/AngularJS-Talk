@@ -220,4 +220,8 @@ In this example we define an animation module and use the animation method to do
 
 34
 
-Where can I use ng-animate?
+ng-animate can be used on any element in combination with ng-show, ng-hide, ng-repeat, and more.
+
+There will be support to introduce new events like -enter and -leave with your own directives.
+
+This is very simple and awesome!

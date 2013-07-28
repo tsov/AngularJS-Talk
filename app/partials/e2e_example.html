@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span6">
+      <pre class="prettyprint">
+describe('Todo App', function() {
+  it('should add todo', function() {
+    var size = repeater('ul li').count();
+    input('newTodo').enter('pick up parts');
+    element('button').click();
+    expect(repeater('ul li').count()).toEqual(size + 1);
+  });
+});
+        {{ prettyPrint() }}
+      </pre>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="well" ng-controller="todoCtrl">
+        <div class="container-fluid">
+          <div class="row-fluid roboto">
+            <h1>Todo List</h1>
+            <div class="page-header">
+              <h4>
+                <small>
+                  {{remainingItems().length}} of {{items.length}} remaining
+                  <button class="pull-right btn btn-mini" ng-click="archiveDone()">Archive</button>
+                </small>
+              </h4>
+            </div>
+            <ul class="nav nav-tabs nav-stacked">
+              <li ng-repeat="item in items" class="done-{{item.done}}" ng-animate="'todo'">
+                <label class="checkbox">
+                  <input type="checkbox" ng-model="item.done">
+                  {{item.name}}
+                </label>
+              </li>
+            </ul>
+            <div class="row-fluid">
+              <div class="control-group">
+                <input class="input-block-level" type="text" ng-model="newTodo" placeholder="New Todo" ng-keyup="addTodo($event)">
+                <button class="btn btn-success pull-right" type="button" ng-click="addTodo()">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="well">
+        <pre class="prettyprint" ng-non-bindable>
+// todo_controller.js
+$scope.addTodo = function() {
+  $scope.items.push({name: $scope.newTodo, done: false});
+  $scope.newTodo = '';
+}
+
+// todo_controllerSpec.js
+describe('#addTodo', function() {
+  beforeEach(function() {
+    scope.newTodo = 'new todo';
+    scope.addTodo();
+  })
+
+  it('should add a todo', function() {
+    expect(scope.items).toContain({name:'new todo', done:false});
+  })
+
+  it('should empty newTodo variable', function() {
+    expect(scope.newTodo).toEqual('');
+  })
+});
+        </pre>
+        {{ prettyPrint() }}
+      </div>
+    </div>
+  </div>
+</div>
