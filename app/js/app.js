@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angular', ['angular.filters', 'angular.services', 'angular.directives', 'angular.controllers']).
+angular.module('angular', ['angular.filters', 'angular.services', 'angular.directives', 'angular.controllers', 'angular.animations']).
   config(['$routeProvider', 'outline', function($routeProvider, outline) {
     $routeProvider.when('/index.html', {redirectTo: '/0'});
     $routeProvider.when('/:slide', {templateUrl: function(params) { 
@@ -8,7 +8,7 @@ angular.module('angular', ['angular.filters', 'angular.services', 'angular.direc
       if (!slideNo) {
         slideNo = 0; 
       }
-      
+
       var id = outline[slideNo].id;
       return 'partials/' + id + '.html' 
     }});
@@ -45,4 +45,17 @@ angular.module('angular', ['angular.filters', 'angular.services', 'angular.direc
     {title: 'Ticker Template', id: 'ticker_template'},
     {title: 'Ticker Controller', id: 'ticker_controller'},
     {title: 'Live Demo', id: 'ticker_demo'},
-    ]);
+    {title: 'Testing your code', id: 'testing'},
+    {title: 'Unit Testing', id: 'unit_testing'},
+    {title: 'Dependency Injection', id: 'dependency_injection'},
+    {title: 'Live Demo', id: 'controllers_test_example'},
+    {title: 'e2e Testing', id: 'e2e_testing'},
+    {title: 'e2e example', id: 'e2e_example'},
+    {title: 'Animations in AngularJS', id: 'animations_intro'},
+    {title: 'ng-animate', id: 'ng_animate'},
+    {title: 'CSS3 Animations', id: 'css3_animations'},
+    {title: 'Live Demo', id: 'ng_animate_demo'},
+    {title: 'Javascript Animation', id: 'javascript_animation'},
+    {title: 'Where can I use ng-animate?', id: 'where_ng_animate'}
+  ]);
+  

@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span6 offset3">
+      <div ng-controller="ngAnimateCtrl">
+        <div class="container-fluid">
+          <div class="row-fluid" ng-init="interval = 1000">
+            <input type="text" class="span12" ng-model="interval">
+            <ul class="navs unstyled roboto spacing">
+              <!--<li class="bigger-font">BEFORE</li>-->
+              <li ng-repeat="item in items" ng-animate="'block'" class="bigger-font">{{item}}</li>
+              <!--<li class="bigger-font">AFTER</li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

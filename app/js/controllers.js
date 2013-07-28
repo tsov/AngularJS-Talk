@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angular.controllers', []).
-  controller('PresentationController', ['$scope', '$routeParams', '$location', 'outline', function($scope, $routeParams, $location, outline) {
+  controller('PresentationController', ['$scope', '$routeParams', '$location', 'outline', '$timeout', function($scope, $routeParams, $location, outline, $timeout) {
     $scope.$on('$routeChangeSuccess', function(event, current) {
       $scope.slide = current.params.slide;
     });
@@ -22,7 +22,13 @@ angular.module('angular.controllers', []).
         $scope.slide = newSlide;
       }
     };
+    $scope.prettyPrint = function() {
+      $timeout(function() {
+        window.prettyPrint();
+      }, 1);
+    };
   }])
+
   .controller('DirectivesDemoController', ['$scope', function($scope) {
     $scope.items = [];
     $scope.$watch('count', function(newValue, oldValue) {
@@ -33,37 +39,70 @@ angular.module('angular.controllers', []).
     });
   }])
 
+  .controller('todoCtrl', [ '$scope', '$element', '$attrs', function($scope, $element, $attrs) {
+    $scope.items = [
+      {
+        name: 'clean up',
+        done: false
+      },
+      {
+        name: 'shopping',
+        done: true
+      },
+      {
+        name: 'finances',
+        done: false
+      }
+    ];
+
+    $scope.remainingItems = function() {
+      var remaining = [ ];
+      $.each($scope.items, function(index, item) {
+        if (!item.done) remaining.push(item);
+      });
+      return remaining;
+    };
+
+    $scope.archiveDone = function() {
+      $scope.items = $scope.remainingItems();
+    };
+
+    $scope.addTodo = function(event) {
+      if ((event && event.keyCode != 13) || !$scope.newTodo) return;
+      $scope.items.push({name: $scope.newTodo, done: false});
+      $scope.newTodo = '';
+    }
+  }])
+
   .controller('myController', ['$scope', function($scope) {
     // $scope.data = {message: "Whoop Whoop!"};
   }])
 
-  .controller('ngAnimateCtrl', ['$scope', function($scope) {
+  .controller('ngAnimateCtrl', ['$scope', '$timeout', function($scope, $timeout) {
 
-    $scope.messages = [
-      {
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        author: "Someone famous in Source Title"
-      },
-      {
-        content: "Integer molestie lorem at massa",
-        author: "Max Hoffmann"
-      },
-      {
-        content: "Nulla volutpat aliquam velit",
-        author: "Max Hoffmann"
-      },
-      {
-        content: "Aenean sit amet erat nunc",
-        author: "Max Hoffmann"
-      },
-      {
-        content: "Ac tristique libero volutpat at",
-        author: "Max Hoffmann"
-      },
-      {
-        content: "Eget porttitor lorem",
-        author: "Max Hoffmann"
-      }
+    $scope.items = [
+      Math.random(),
+      Math.random(),
+      Math.random(),
+      Math.random(),
+      Math.random(),
+      Math.random(),
+      Math.random(),
+      Math.random(),
+      Math.random(),
+      Math.random(),
+      Math.random(),
+      Math.random()
     ];
+
+    $scope.populate = function() {
+      $timeout(function() {
+        $scope.items.unshift(Math.random());
+        $scope.items.pop();
+        $scope.populate();
+      }, $scope.interval || 1000);
+    };
+
+    $scope.populate();
 
   }]);
