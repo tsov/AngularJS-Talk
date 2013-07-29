@@ -121,21 +121,96 @@ At least if you are to believe a few at Google who are working on the next gener
 
 Polymer
 
+17
 
+We're going to switch gears a bit and talk about how Angular helps you organize your application a bit better - we're going to talk about dependency injection and modules
 
+We talked about what an angular controller does, but we never showed how one looks when we create it:
 
+Let's take a look at that:
 
+18
 
+Here is an example of a controller called 'PresentationController'. Note that we add it to the module by calling module.controller on it. We give the controller a name, and then we declare some things that the controller needs. Here, the controller needs the $scope it is working with, and it needs a service
 
+So that's a controller - the same pattern is used for other stuff in angular - we talked about directives, so here's an example with directives:
 
+19
+
+Here is a directive called 'demoTicker'. Again note that you call module.directive on it - you give it a name, and the same as with controllers, you list the dependencies that you need in the directive
+
+This isn't a complete example on directives - we're going to go through more detail later
+
+20
+
+Just one more example - this time we're looking at how to declare a constant - here is pi
+
+21
+
+There are two main concepts to get out of these examples - 
+
+first is Dependency Injection
+
+Notice that in all the previous examples - the functions just declare that they need stuff - the controller needs $scope, and service, the directive needed $routeParams - 
+
+The angular framework will take care of finding the dependencies and wiring them together
+
+22
+
+The second main concept is that of modules - it's a nice way to organize your application
+
+It means that you can group together logical components that go together nicely.
+
+Modules have dependencies
+
+Finally, modules are good for testing - you can swap in a module with mocked components for a real one
 
 23
 
+Let's revisit directives a bit more now
+
+24
+
+Traverse parsed HTML, and find directives, and call $compile
+
+25
+
+The compile function modifies the DOM - in a lot of cases, this can be as simple as replacing a single element with a template of content
+
+26
+
+The linking function sets up bindings between the DOM and the scope
+
+27
+
+Notice we are going back to declaring a directive - we start by giving the directive a name, and specifying a function - this function could have declared dependencies but we don't
+
+The function is actually a factory function and returns an object describing the directive
+
+Notice the restrict here says A - that means the directive can be used as an attribute .. if it had E, the directive could be used as an element
+
+Each instance of a directive can have its own scope associated with it - this is determined by the scope defined here
+
+Here, the scope has a few properties which get values defined on the element on which the directive is declared
+28
+
+The easiest way to define the DOM content of a directive is to use a template - like we do here - note we can use directives within the template as well
+
+
+29
+
+
+Finally, to manage the scope of a directive, a directive can have its own controller
+
+30
+
 Testing your angular application is easier than thought and makes you aware of potential code failures.
+
+Angular comes with support for unit and e2e testing. e2e stands for end2end and is used for testing business logic.
 
 Jasmine, a javascript testing framework, can be used for unit testing. With Jasmine you can test the behaviour of your controllers, services, filters & directives.
 
-24
+31
 
 Angular is written with testability in mind, but it's up to the developer to do the right thing.
 
@@ -143,7 +218,7 @@ Separation of code is important for testability, you don't want to end up with o
 
 Testing will force you to break-up code to be single purposed, so code behaviour can be tested separately.
 
-25
+32
 
 Some functions you want to test might rely on service calls or other slow dependencies.
 
@@ -153,13 +228,13 @@ You should only test how YOUR function works with a dependency not test the depe
 
 example: XHR object mock
 
-26
+33
 
 Here we have a sample todo app written with angular.
 
 We are going to have a closer look into the addTodo function for the todoController.
 
-27
+34
 
 applications grow in size and complexity, it gets very unrealistic and unreliable to test business logic manually.
 
@@ -167,7 +242,7 @@ The angular team built an angular scenario runner, which simulates user interact
 
 tests describe how your application should behave, given a certain interaction in a specific state.
 
-28
+35
 
 Back to the todo example, let's have a look what an e2e test could look like.
 
@@ -175,7 +250,7 @@ Here we are testing on a higher level basis, views are rendered and we test in t
 
 These tests can be opened in any browser to check cross-browser compatibility
 
-29
+36
 
 Ok, how to use animations in angular. For people coming from a jQuery background might have a hart time adapting.
 
@@ -185,13 +260,13 @@ Wouldn't it be nice to define animations on event basis?
 
 The angular team introduced a new directive handling this concern, the ng-animate directive
 
-30
+37
 
 With ng-animate you can define animations with several different directives, ng-repeat, ng-view, ng-show, ng-hide, etc
 
 These animations can be defined in pure CSS3 or in Javascript code, even jQuery if needed.
 
-31
+38
 
 In this example we use CSS to define our animation.
 
@@ -200,7 +275,7 @@ with -active you define properties on how it should end (end state)
 
 Let' have a look what that looks like in action
 
-32
+39
 
 So this works all through CSS3 transitions and angular will correctly add and remove the css classes in the right time.
 
@@ -208,13 +283,13 @@ The nice thing is all your animation handling is outside your JS code, which als
 
 everything is happening through bindings and you have to worry less about updating your view.
 
-33
+40
 
 For people who prefer using jQuery or other JS UI based libraries can do so too. Not every browser can handle CSS3
 
 In this example we define an animation module and use the animation method to do what we did in CSS, just through Javascript
 
-34
+41
 
 ng-animate can be used on any element in combination with ng-show, ng-hide, ng-repeat, and more.
 
