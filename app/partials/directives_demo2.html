@@ -5,20 +5,22 @@
     </div>
     
   <div class="row-fluid">
-    <div class="span6">
-      <input type="text" value="0" ng-model="count"><br />
-      <h3>Count: {{count}}</h3>
-
-      <ul ng-show="count > 0">
-        <li ng-repeat="item in items">Item #{{item.index}}</li>
-      </ul>
+    <div class="span3">
+      <div ng-init="letters = ['A','B','C']">
+        letters array has {{letters.length}} elements.
+        <h1 ng-repeat="letter in letters">
+          letters[{{$index}}] = {{letter}}
+        </h1>
+      </div>
     </div>
-    <div class="span6">
+    <div class="span9">
       <pre ng-non-bindable>
-&lt;input ng-model="count" /&gt;
-&lt;ul&gt;
-  &lt;li ng-repeat="item in items" /&gt;
-&lt;/ul&gt;
+&lt;div ng-init="letters = ['A','B','C']"&gt;
+  letters array has {{letters.length}} elements.
+  &lt;h1 ng-repeat="letter in letters"&gt;
+    letters[{{$index}}] = {{letter}}
+  &lt;/h1&gt;
+&lt;/div&gt;
       </pre>
     </div>
   </div>
