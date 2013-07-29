@@ -1,37 +1,22 @@
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="span6">
+    <div class="span6 offset3">
       <pre class="prettyprint">
 .block-enter, .block-leave {
-  -webkit-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-  -moz-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-  -ms-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-  -o-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-  transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-  position: relative;
-  top: 0;
+  transition: 500ms linear all;
 }
-
 .block-enter {
   left: 200px;
-  line-height: 0;
 }
-
 .block-enter-active {
   left: 0;
-  line-height: 100%;
 }
-
 .block-leave {
   left: 0;
-  line-height: 100%;
 }
-
 .block-leave-active {
   left: 200px;
-  line-height: 0;
 }
-        {{ prettyPrint() }}
       </pre>
     </div>
   </div>

@@ -40,6 +40,7 @@ angular.module('angular', ['angular.filters', 'angular.services', 'angular.direc
     {title: 'Testing your code', id: 'testing'},
     {title: 'Unit Testing', id: 'unit_testing'},
     {title: 'Dependency Injection', id: 'dependency_injection'},
+    {title: 'How?', id: 'how_di_testing'},
     {title: 'Live Demo', id: 'controllers_test_example'},
     {title: 'e2e Testing', id: 'e2e_testing'},
     {title: 'e2e example', id: 'e2e_example'},
@@ -47,6 +48,6 @@ angular.module('angular', ['angular.filters', 'angular.services', 'angular.direc
     {title: 'ng-animate', id: 'ng_animate'},
     {title: 'CSS3 Animations', id: 'css3_animations'},
     {title: 'Live Demo', id: 'ng_animate_demo'},
-    {title: 'Javascript Animation', id: 'javascript_animation'},
+    {title: 'Only CSS?', id: 'only_css'},
     {title: 'Where can I use ng-animate?', id: 'where_ng_animate'}
   ]);

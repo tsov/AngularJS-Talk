@@ -133,11 +133,7 @@ Polymer
 
 Testing your angular application is easier than thought and makes you aware of potential code failures.
 
-Angular comes with support for unit and e2e testing. e2e stands for end2end and is used for testing business logic.
-
 Jasmine, a javascript testing framework, can be used for unit testing. With Jasmine you can test the behaviour of your controllers, services, filters & directives.
-
-The angular team has built an angular scenario runner for the e2e tests, which simulates user interactions (no selenium needed).
 
 24
 
@@ -153,7 +149,7 @@ Some functions you want to test might rely on service calls or other slow depend
 
 To resolve that, you can mock dependencies through DI to avoid latency.
 
-You should only test how YOUR function works with a dependency.
+You should only test how YOUR function works with a dependency not test the dependency itself.
 
 example: XHR object mock
 
@@ -167,7 +163,7 @@ We are going to have a closer look into the addTodo function for the todoControl
 
 applications grow in size and complexity, it gets very unrealistic and unreliable to test business logic manually.
 
-The angular team built an angular scenario runner, which simulates user interactions.
+The angular team built an angular scenario runner, which simulates user interactions, so selenium is not necessary.
 
 tests describe how your application should behave, given a certain interaction in a specific state.
 
@@ -193,7 +189,7 @@ The angular team introduced a new directive handling this concern, the ng-animat
 
 With ng-animate you can define animations with several different directives, ng-repeat, ng-view, ng-show, ng-hide, etc
 
-These animations can be defined in CSS3 or in Javascript code, even jQuery if needed.
+These animations can be defined in pure CSS3 or in Javascript code, even jQuery if needed.
 
 31
 
