@@ -1,0 +1,14 @@
+<div class="slide">
+	<div class="slide-content" style="top: 100px;">
+    <div class="span6 offset3">
+      <pre>
+controller: function($scope) {
+  $scope.subset = [];
+  $scope.$watch('slide', function(newValue, oldValue) {
+    $scope.subset = $scope.feed.slice(...);
+  });
+}
+      </pre>
+    </div>
+	</div>
+</div>
