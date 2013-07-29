@@ -33,12 +33,10 @@ angular.module('angular', ['angular.filters', 'angular.services', 'angular.direc
     {title: 'Doing things declaratively', id: 'declarative'},
     {title: 'Web Components', id: 'components'},
     {title: 'A little organization', id: 'organization'},
-    {title: 'Constants', id: 'constants'},
     {title: 'Writing Controllers', id: 'writing_controllers'},
     {title: 'Writing Directives', id: 'writing_directives'},
     {title: 'Constants', id: 'constants'},
     {title: 'Dependency Injection', id: 'di'},
-    {title: 'Configuration', id: 'configuration'},
     {title: 'Modules', id: 'modules'},
     {title: 'Directives revisited', id: 'revisited'},
     {title: 'Compilation', id: 'compilation'},
@@ -60,5 +58,8 @@ angular.module('angular', ['angular.filters', 'angular.services', 'angular.direc
     {title: 'CSS3 Animations', id: 'css3_animations'},
     {title: 'Live Demo', id: 'ng_animate_demo'},
     {title: 'Only CSS?', id: 'only_css'},
-    {title: 'Where can I use ng-animate?', id: 'where_ng_animate'}
+    {title: 'Where can I use ng-animate?', id: 'where_ng_animate'},
+    {title: 'The End', id: 'end'},
+    {title: 'Q&A', id: 'qa'}
   ]);
+  

@@ -1,24 +1,18 @@
 <div class="container-fluid">
   <div class="row-fluid" ng-controller="DirectivesDemoController">
-    <div class="page-header">
-      <h1>Directives</h1>
-    </div>
+
     
   <div class="row-fluid">
-    <div class="span6">
-      <input type="text" value="0" ng-model="count"><br />
-      <h3>Count: {{count}}</h3>
-
-      <ul ng-show="count > 0">
-        <li ng-repeat="item in items">Item #{{item.index}}</li>
-      </ul>
+    <div class="span3">
+      <input type="checkbox" ng-model="checked">
+      <h1 ng-show="checked">Clicked!</h1>
+      <h1 ng-hide="checked">Unclicked...</h1>
     </div>
-    <div class="span6">
+    <div class="span9">
       <pre ng-non-bindable>
-&lt;input ng-model="count" /&gt;
-&lt;ul ng-show="count > 0"&gt;
-  &lt;li ng-repeat="item in items" /&gt;
-&lt;/ul&gt;
+&lt;input type="checkbox" ng-model="checked"&gt;
+&lt;h1 ng-show="checked"&gt;Clicked!&lt;/h1&gt;
+&lt;h1 ng-hide="checked"&gt;Unclicked...&lt;/h1&gt;
       </pre>
     </div>
   </div>
