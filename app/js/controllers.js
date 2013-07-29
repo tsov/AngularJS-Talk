@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angular.controllers', []).
-  controller('PresentationController', ['$scope', '$routeParams', '$location', 'outline', '$timeout', function($scope, $routeParams, $location, outline, $timeout) {
+  controller('PresentationController', ['$scope', '$routeParams', '$location', 'outline', function($scope, $routeParams, $location, outline) {
     $scope.$on('$routeChangeSuccess', function(event, current) {
       $scope.slide = current.params.slide;
     });
@@ -22,10 +22,11 @@ angular.module('angular.controllers', []).
         $scope.slide = newSlide;
       }
     };
-    $scope.prettyPrint = function() {
-      $timeout(function() {
-        window.prettyPrint();
-      }, 1);
+    $scope.navigateLeft = function() {
+      $scope.navigate({keyCode:37});
+    };
+    $scope.navigateRight = function() {
+      $scope.navigate({keyCode:39});
     };
   }])
 
