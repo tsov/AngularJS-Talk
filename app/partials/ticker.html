@@ -1,11 +1,13 @@
 <div class="slide">
 	<div class="slide-content" style="top: 100px;">
-<pre>&lt;div demo-ticker="outline" slide="slide"&gt;&lt;/div&gt;</pre><br/>
+<pre>&lt;<span class="elem">div</span> demo-ticker=<span class="str">"outline"</span> slide=<span class="str">"slide"</span>&gt;&lt;<span class="elem">/div</span>&gt;</pre>
   <pre>
-module.directive('demoTicker', function() {
-  return {
-    scope: { 'feed': '=demoTicker', 'slide': '=slide' },
-...
+module.directive(<span class="str">'demoTicker'</span>, <b>function</b>() {
+  <b>return</b> {
+    scope: { <span class="str">'slides'</span>: <span class="str">'=demoTicker'</span>, <span class="str">'slide'</span>: <span class="str">'=slide'</span> },
+    template: ...,
+    controller: ...
+  };
 });</pre>
 	</div>
 </div>

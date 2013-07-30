@@ -1,14 +1,12 @@
 <div class="slide">
 	<div class="slide-content" style="top: 100px;">
   <pre>
-{
-  template:
-    '&lt;h1&gt;' + 
-      '&lt;span ng-repeat="item in subset"&gt;' +
-        '&lt;small ng-show="..."&gt;{{item.title}}&lt;/small&gt; ' +
-        '&lt;span ng-show="..."&gt;{{item.title}}&lt;/span&gt; ' +
-      '&lt;/span&gt;' +
-    '&lt;/h1&gt;'
-}</pre>
+template:
+  <span class="str">'&lt;div&gt;'</span> + 
+    <span class="str">'&lt;span ng-repeat="slide in subset"&gt;'</span> +
+      <span class="str">'&lt;span ng-show="..."&gt;{{slide.title}}&lt;/span&gt;'</span> +
+      <span class="str">'&lt;span class="highlighted" ng-show="..."&gt;{{slide.title}}&lt;/span&gt;'</span> +
+    <span class="str">'&lt;/span&gt;'</span> +
+  <span class="str">'&lt;/div&gt;'</span>;</pre>
 	</div>
 </div>

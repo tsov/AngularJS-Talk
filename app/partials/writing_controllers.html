@@ -1,10 +1,12 @@
 <div class="slide">
 	<div class="slide-content" style="top: 200px;">
   <pre>
-var module = angular.module('demo');
-module.controller('PresentationController',
-  function($scope, service) {
-    ...
+<b>var</b> module = angular.module(<span class="str">'seattle'</span>);
+module.controller(<span class="str">'PresentationController'</span>,
+  <b>function</b>($scope, service) {
+    $scope.name = <span class="str">'Ron Burgundy'</span>;
+    $scope.greeting = <span class="str">'I'm Ron Burgundy?'</span>;
+    $scope.goodbye = service.get();
   });</pre>
 	</div>
 </div>

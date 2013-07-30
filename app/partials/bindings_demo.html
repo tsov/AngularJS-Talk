@@ -1,20 +1,17 @@
-<div class="container-fluid">
-  <div class="page-header">
-    <h1>Bindings <small></small></h1>
-  </div>
-  <div class="row-fluid">
-    <div class="span6">
-      <input type="text" ng-model="name" class="span12">
-      <div class="well">
-        <h3>Hello {{name}}</h3>
+<div class="slide">
+	<div class="slide-content" style="top: 300px;">
+    <div class="row-fluid">
+      <div class="span6">
+        <input type="text" ng-model="name" class="span12">
+        <div class="well">
+          <h3>Hello {{name}}</h3>
+        </div>
       </div>
-    </div>
-    <div class="span6">
-      <pre ng-non-bindable>
-&lt;input type="text" 
-  ng-model="name"&gt;
-&lt;h3&gt;Hello {{name}}&lt;/h3&gt;
-      </pre>
+      <div class="span6">
+        <pre ng-non-bindable>
+&lt;<span class="elem">input</span> ng-model=<span class="str">"name"</span>&gt;
+&lt;<span class="elem">h3</span>&gt;Hello {{name}}&lt;<span class="elem">/h3</span>&gt;</pre>
+      </div>
     </div>
   </div>
 </div>

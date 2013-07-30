@@ -1,24 +1,17 @@
-<div class="container-fluid">
-  <div class="row-fluid" ng-controller="DirectivesDemoController">
-
-    
-  <div class="row-fluid">
-    <div class="span3">
-      <input type="checkbox" ng-model="checked">
-      <h1 ng-show="checked">Clicked!</h1>
-      <h1 ng-hide="checked">Unclicked...</h1>
+<div class="slide">
+	<div class="slide-content" style="top: 300px;">
+    <div class="row-fluid">
+      <div class="span3">
+        <input type="checkbox" ng-model="checked">
+        <h1 ng-show="checked">Clicked!</h1>
+        <h1 ng-hide="checked">Unclicked...</h1>
+      </div>
+      <div class="span9">
+        <pre ng-non-bindable>
+&lt;<span class="elem">input</span> type=<span class="str">"checkbox"</span> ng-model=<span class="str">"checked"</span>&gt;
+&lt;<span class="elem">h1</span> ng-show=<span class="str">"checked"</span>&gt;Clicked!&lt;<span class="elem">/h1</span>&gt;
+&lt;<span class="elem">h1</span> ng-hide=<span class="str">"checked"</span>&gt;Unclicked...&lt;<span class="elem">/h1</span>&gt;</pre>
+      </div>
     </div>
-    <div class="span9">
-      <pre ng-non-bindable>
-&lt;input type="checkbox" ng-model="checked"&gt;
-&lt;h1 ng-show="checked"&gt;Clicked!&lt;/h1&gt;
-&lt;h1 ng-hide="checked"&gt;Unclicked...&lt;/h1&gt;
-      </pre>
-    </div>
-  </div>
-
-
-    
-
   </div>
 </div>

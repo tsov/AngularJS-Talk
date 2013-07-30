@@ -1,9 +1,9 @@
 <div class="slide">
 	<div class="slide-content" style="top: 100px;">
   <pre>
-controller: function($scope) {
+controller: <b>function</b>($scope) {
   $scope.subset = [];
-  $scope.$watch('slide', function(newValue, oldValue) {
+  $scope.$watch(<span class="str">'slide'</span>, <b>function</b>(newValue, oldValue) {
     $scope.subset = $scope.feed.slice(...);
   });
 }</pre>
