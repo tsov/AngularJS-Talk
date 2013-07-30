@@ -1,16 +1,13 @@
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span6 offset3">
-      <pre class="prettyprint">
-describe('Todo App', function() {
-  it('should add todo', function() {
-    var size = repeater('ul li').count();
-    input('newTodo').enter('pick up parts');
-    element('button').click();
-    expect(repeater('ul li').count()).toEqual(size + 1);
+<div class="slide">
+	<div class="slide-content" style="top: 150px;">
+      <pre>
+describe(<span class="str">'Todo App'</span>, <b>function</b>() {
+  it(<span class="str">'should add todo'</span>, <b>function</b>() {
+    <b>var</b> size = repeater(<span class="str">'ul li'</span>).count();
+    input(<span class="str">'newTodo'</span>).enter(<span class="str">'pick up parts'</span>);
+    element(<span class="str">'button'</span>).click();
+    expect(repeater(<span class="str">'ul li'</span>).count()).toEqual(size + 1);
   });
-});
-      </pre>
-    </div>
+});</pre>
   </div>
 </div>

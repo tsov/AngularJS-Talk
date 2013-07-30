@@ -1,32 +1,23 @@
-<div class="container-fluid">
-  <div class="row-fluid" ng-controller="DirectivesDemoController">
-    <div class="page-header">
-      <h1>Directives</h1>
-    </div>
-    
-  <div class="row-fluid">
-    <div class="span3">
-      <div ng-init="letters = ['A','B','C']">
-        letters array has {{letters.length}} elements.
-        <h1 ng-repeat="letter in letters">
-          letters[{{$index}}] = {{letter}}
-        </h1>
+<div class="slide">
+	<div class="slide-content" style="top: 200px;">
+    <div class="row-fluid" ng-controller="DirectivesDemoController">
+      <div class="span3">
+        <div ng-init="letters = ['A','B','C']">
+          We've got {{letters.length}} letters!
+          <h1 ng-repeat="letter in letters">
+            letters[{{$index}}] = {{letter}}
+          </h1>
+        </div>
+      </div>
+      <div class="span9">
+        <pre ng-non-bindable>
+&lt;<span class="elem">div</span> ng-init=<span class="str">"letters = ['A','B','C']"</span>&gt;
+  We've got {{letters.length}} letters!
+  &lt;<span class="elem">h1</span> ng-repeat=<span class="str">"letter in letters"</span>&gt;
+    letters[{{$index}}] = {{letter}}
+  &lt;<span class="elem">/h1</span>&gt;
+&lt;<span class="elem">/div</span>&gt;</pre>
       </div>
     </div>
-    <div class="span9">
-      <pre ng-non-bindable>
-&lt;div ng-init="letters = ['A','B','C']"&gt;
-  letters array has {{letters.length}} elements.
-  &lt;h1 ng-repeat="letter in letters"&gt;
-    letters[{{$index}}] = {{letter}}
-  &lt;/h1&gt;
-&lt;/div&gt;
-      </pre>
-    </div>
-  </div>
-
-
-    
-
   </div>
 </div>

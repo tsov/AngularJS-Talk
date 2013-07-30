@@ -1,6 +1,7 @@
-<div class="container-fluid">
+<div class="slide">
+  <div class="slide-content" style="top: 10px;">
   <div class="row-fluid">
-    <div class="span6">
+    <div class="span3">
       <div class="well" ng-controller="todoCtrl">
         <div class="container-fluid">
           <div class="row-fluid roboto">
@@ -31,32 +32,33 @@
         </div>
       </div>
     </div>
-    <div class="span6">
-      <div class="well">
-        <pre class="prettyprint" ng-non-bindable>
-// todo_controller.js
-$scope.addTodo = function() {
-  $scope.items.push({name: $scope.newTodo, done: false});
-  $scope.newTodo = '';
-}
-
-// todo_controllerSpec.js
-describe('#addTodo', function() {
-  beforeEach(function() {
-    scope.newTodo = 'new todo';
+    <div class="span9">
+        <pre ng-non-bindable>
+$scope.addTodo = <b>function</b>() {
+  $scope.items.push({
+      name: $scope.newTodo, 
+      done: false });
+  $scope.newTodo = <span class="str">''</span>;
+}</pre>
+<pre non-bindable>
+describe(<span class="str">'#addTodo'</span>, <b>function</b>() {
+  beforeEach(<b>function</b>() {
+    scope.newTodo = <span class="str">'new todo'</span>;
     scope.addTodo();
-  })
+  });
 
-  it('should add a todo', function() {
-    expect(scope.items).toContain({name:'new todo', done:false});
-  })
+  it(<span class="str">'should add a todo'</span>, <b>function</b>() {
+    expect(scope.items).toContain({
+        name: <span class="str">'new todo'</span>, 
+        done: <b>false</b> });
+  });
 
-  it('should empty newTodo variable', function() {
-    expect(scope.newTodo).toEqual('');
-  })
-});
-        </pre>
-      </div>
-    </div>
+  it(<span class="str">'should empty newTodo variable'</span>, 
+    <b>function</b>() {
+      expect(scope.newTodo).toEqual(<span class="str">''</span>);
+    });
+});</pre>
   </div>
+  </div>
+</div>
 </div>

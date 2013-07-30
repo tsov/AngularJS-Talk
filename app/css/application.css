@@ -1,7 +1,21 @@
 body {
-  font-family: 'Consolas';
+  font-family: 'Consolas' !important;
   font-weight: 300;
   position: relative;
+}
+
+pre {
+  font-size: 55px;
+  line-height: 70px;
+  text-align: left;
+}
+
+.elem {
+  color: #f55;
+}
+
+.str {
+  color: #55f;
 }
 
 .roboto {
